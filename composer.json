@@ -1,0 +1,22 @@
+{
+    "name" : "learn-no-framework",
+    "description" : "simple mvc framework for learning purposes",
+    "keywords" : ["php", "no-framework", "php-from-scratch", "mvc"],
+    "license" : "MIT",
+    "authors": [
+        {
+            "name" : "Ahmad Hasyim",
+            "email" : "lordhasyim@gmail.com",
+            "role" : "Learner / Student"
+        }
+    ],
+    "require": {
+        "php" : ">=7.0.0",
+        "filp/whoops": "~2.1"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "Example\\": "src/"
+        }
+    }
+}
