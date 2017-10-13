@@ -18,8 +18,19 @@ if ($environment !== 'production') {
     });         
 }
 
+$request = new \Http\HttpRequest($_GET, $_POST, $_COOKIE, $_FILES, $_SERVER);
+$response = new \Http\HttpResponse;
 $whoops->register();
-throw new \Exception;
+$content = '<h1>hello bos</h1>';
+$response->setContent('404 - page not found');
+$response->setStatusCode(404);
+foreach ($response->getHeaders() as $header) {
+    header($header, false);
+}
+echo $response->getContent();
+
+
+//throw new \Exception;
 
 
 
